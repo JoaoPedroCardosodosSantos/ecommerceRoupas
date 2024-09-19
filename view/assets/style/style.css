@@ -1,0 +1,178 @@
+/* Variáveis */
+:root {
+    /* PALHETA DE CORES DO PROJETO */
+    --secondary-color: #f3b191;
+    --third-color: #f6d2be;
+    --c-body: #ffffff;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5s ease;
+}
+
+/* FONTES DO PROJETO */
+@font-face {
+    font-family: gotham;
+    src: url("../fonts/Gotham-Book.otf");
+}
+
+@font-face {
+    font-family: gotham-light;
+    src: url("../fonts/Gotham-Light.otf");
+}
+
+@font-face {
+    font-family: gotham-medium;
+    src: url("../fonts/Gotham-Medium.otf");
+}
+
+@font-face {
+    font-family: gotham-bold;
+    src: url("../fonts/Gotham-Bold.otf");
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+.h1 {
+    font-family: gotham-bold;
+}
+
+h2,
+h3,
+h4,
+h5,
+.h2,
+.h3,
+.h4,
+.h5 {
+    font-family: gotham;
+    font-weight: 500;
+    color: var(--30_color);
+}
+
+.p,
+p {
+    font-family: gotham;
+    font-weight: 500;
+    color: silver;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.card-price {
+    font-family: gotham-bold;
+    font-size: 1.2rem;
+}
+.card-text {
+    text-align: justify;
+}
+
+.line {
+    width: 60px;
+    height: 10px;
+    background-color: var(--third-color);
+}
+
+/* NAVBAR */
+nav {
+    box-shadow: var(--box-shadow);
+    background-color: transparent;
+}
+
+.logo-brand {
+    width: 15rem;
+}
+
+.nav-link {
+    font-family: gotham-medium;
+}
+nav .nav-item {
+    font-size: 0.85rem;
+}
+.vertical-line {
+    /*  Elemento Linha Vertical - Como pode ser visto na navbar (entre botao carrinho de COMPRAS e TROCA DE TEMA */
+    width: 1px;
+    border-radius: 5px;
+    height: 45px;
+    background-color: #a5a5b0;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.cadastro {
+    background-color: var(--third-color);
+}
+.cadastro:hover {
+    opacity: 70%;
+    transition: var(--transition);
+}
+.nav-item .bi-cart {
+    font-size: 1.2rem;
+}
+
+/* CAROUSEL */
+.myCarousel {
+    margin-bottom: 4rem;
+}
+.hero h1 {
+    color: #ffffff;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: black;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 32rem;
+}
+
+/* LOGIN */
+.logarCadastro {
+    padding-top: 5rem;
+}
+
+.inscreva {
+    background-color: var(--secondary-color);
+    border-top-left-radius: 4.3%;
+    border-bottom-left-radius: 4.3%;
+}
+
+.bemvindo .login {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--secondary-color);
+    border-top-right-radius: 4.3%;
+    border-bottom-right-radius: 4.3%;
+}
+
+.social-icons .bi:hover {
+    transition: ease 0.3s;
+    color: #a5a5b0;
+}
+
+/* btn prev && prev */
+
+#btn-prev {
+    position: absolute;
+    top: -20%;
+    left: -13%;
+}
+
+#btn-next {
+    position: absolute;
+    right: -13%;
+    top: -20%;
+}
