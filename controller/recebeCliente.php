@@ -1,35 +1,38 @@
 <?php
+
+require_once '../model/conexao.php';
+
 $user_name = $_POST['user_name'];
 $primeiro_nome = $_POST['primeiro_nome'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-$sexo = $_POST['flexRadioDefault'];
 $sobrenome = $_POST['sobrenome'];
 $telefone = $_POST['telefone'];
-$consfirma_senha = $_POST['confirma_senha'];
-$rua = $_POST['rua'];
+$sexo = $_POST['flexRadioDefault'];
+$cpf = $_POST['CPF'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 $numero = $_POST['numero'];
-$cidade = $_POST['cidade'];
-$cep = $_POST['cep'];
-$uf = $_POST['uf'];
 $complemento = $_POST['complemento'];
-$termos = $_POST['termos'];
+$obs = $_POST['obs'];
 
-if($senha == $consfirma_senha){
+# Variáveis auxiliares
+$confirma_senha = $_POST['confirma_senha'];
+$termos = isset($_POST['termos']);  // Certificar-se que o campo "termos" foi preenchido
+
+
+if($senha == $confirma_senha) {
     if($termos) {
-        # ============== Tabelas e colunas ====== 
-        $tabela = "Cliente";
-        $colunas = "Nome, Telefone, CPF, Email, Numero_residencial, Complemento, Obs";
-
-        $valores = $user_name, $primeiro_nome, $email, $senha, $sexo, $sobrenome, $telefone, $rua, $numero, $cidade, $cep, $uf, $complemento, $termos; # Só arruama a ordem
-
+        # Tabelas e colunas
+       
+        # Criação da conexão com a classe Conexao
         $conexao = new Conexao();
-        $conexao->insereCliente($tabela, $colunas, $valores);
-    }else {
+
+        $conexao->insereCliente($user_name, $primeiro_nome, $sobrenome, $sexo, $telefone, $cpf, $email, $senha, $numero, $complemento, $obs);
+       
+    } else {
         echo "<script>alert('Termos de uso não preenchidos');</script>";
     }
-}else {
-    echo "<script>alert('Senha incompativel, digite a mesma senha duas vezes !');</script>";
+} else {
+    echo "<script>alert('Senha incompatível, digite a mesma senha duas vezes!');</script>";
 }
 
 ?>

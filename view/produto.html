@@ -104,18 +104,35 @@
             </ul>
         </div>
     </nav>
-    <form action="" method="post">
-        <input type="text" id="model" class="blockI" name="model">
-        <label for="idEst">Insira o modelo do produto</label>
-
-        <input type="text" id="nome" class="blockI" name="nome">
-        <label for="idEst">Insira o nome do produto</label>
-
-        <input type="text" id="tecido" class="blockI" name="tecido">
-        <label for="idEst">Insira o tecido do produto</label>
-
-        <input type="date" id="marca" class="blockI" name="marca">
-        <label for="idEst">Insira a marca do produto</label>
+    <form action="../controller/recebeProduto.php" method="post">
+        <div class="col-12 text-center mt-5">
+            <div class="col-4 p-2">
+                <label for="modelo">Insira o modelo do produto: </label>  
+                <input name="modelo" type="text" id="model" class="blockI">
+            </div>
+    
+            <div class="col-4 p-2">
+                <label for="nome">Insira o nome do produto: </label>
+                <input type="text" id="nome" class="blockI" name="nome">
+            </div>
+    
+            <div class="col-4 p-2">
+                <label for="tecido">Insira o tecido do produto: </label>
+                <input type="text" id="tecido" class="blockI" name="tecido">
+            </div>
+    
+            <div class="col-4 p-2">
+                <label for="marca">Insira a marca do produto: </label>
+                <input type="text" id="marca" class="blockI" name="marca">
+            </div>
+            <div class="col-4 p-2">
+                <label for="cor">Insira a cor do produto: </label>
+                <input type="text" id="cor" class="blockI" name="cor">
+            </div>
+            <div class="col-4 p-2">
+                <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
     </form>
 
 </body>

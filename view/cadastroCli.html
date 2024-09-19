@@ -60,6 +60,14 @@
                         <input name="telefone" type="text" value="" class="form-control telefone" size="15" id="floatingInput" placeholder="Insira seu telefone">
                         <label for="floatingInput">Insira seu telefone</label>
                     </div>
+                    <div class="form-floating mb-3">
+                        <input name="CPF" type="text" class="form-control" id="floatingInput" placeholder="Insira seu Sobrenome">
+                        <label for="floatingInput">Insira seu CPF</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="obs" type="text" class="form-control" id="floatingInput" placeholder="Insira seu Sobrenome">
+                        <label for="obs">Obs</label>
+                    </div>
                     <div class="form-floating">
                         <input name="confirma_senha" type="password" class="form-control" id="floatingPassword" placeholder="Confirmar senha">
                         <label for="floatingPassword">Confirmar senha</label>
@@ -84,9 +92,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 <hr />
-                <form action="." method="get">
+                <form action="../controller/recebeEndereco.php" method="post">
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <div class="form-floating mb-3">

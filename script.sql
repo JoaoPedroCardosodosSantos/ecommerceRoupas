@@ -7,12 +7,15 @@ USE LojaRoupas;
 -- Criação da tabela Cliente
 CREATE TABLE Cliente (
     IDcliente INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(20) NOT NULL, 
+    User_name VARCHAR(20) NOT NULL,
+    Primeiro_nome VARCHAR(10) NOT NULL, 
+    Sobrebome VARCHAR(10) NOT NULL,
+    Sexo BOOLEAN,
     Telefone CHAR(11) NOT NULL UNIQUE,
     CPF CHAR(11) NOT NULL UNIQUE,
     Email VARCHAR(40) NOT NULL UNIQUE,
+    Senha VARCHAR(225) NOT NULL,
     Numero_residencial INT NOT NULL,
-    Complemento VARCHAR(35), 
     Obs VARCHAR(35)
 );
 
@@ -20,7 +23,6 @@ CREATE TABLE Cliente (
 CREATE TABLE Endereco (
     IDendereco INT AUTO_INCREMENT PRIMARY KEY,
     CEP CHAR(8) NOT NULL,
-    Bairro VARCHAR(20) NOT NULL,
     Rua VARCHAR(20) NOT NULL,
     Cidade VARCHAR(20) NOT NULL,
     UF CHAR(2) NOT NULL,
